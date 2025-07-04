@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omah Lumpia - Lumpia Lezat dan Berkualitas</title>
+    <link rel="stylesheet" href="style-fixed.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Omah Lumpia</div>
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero">
+            <div class="hero-content">
+                <h1>Omah Lumpia</h1>
+                <p>Nikmati kelezatan lumpia dengan berbagai varian yang menggugah selera</p>
+                <a href="#menu" class="cta-button">Lihat Menu</a>
+            </div>
+        </section>
+
+        <section id="tentang" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Tentang Omah Lumpia</h2>
+                        <p>Omah Lumpia adalah usaha keluarga yang telah berdedikasi menghadirkan cita rasa lumpia autentik sejak bertahun-tahun. Kami menggunakan resep turun temurun dengan bahan-bahan segar pilihan untuk menciptakan lumpia yang lezat dan berkualitas tinggi.</p>
+                        <div class="features">
+                            <div class="feature-item">
+                                <i class="fas fa-leaf"></i>
+                                <div>
+                                    <h4>Bahan Segar</h4>
+                                    <p>Menggunakan rebung, ayam, dan sayuran segar setiap hari</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <h4>Resep Turun Temurun</h4>
+                                    <p>Dibuat dengan resep keluarga yang telah teruji waktu</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-award"></i>
+                                <div>
+                                    <h4>Kualitas Terjamin</h4>
+                                    <p>Setiap lumpia dibuat dengan standar kualitas tinggi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="lumpia.jpg" alt="Proses pembuatan lumpia" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <h2>Menu Kami</h2>
+            <p class="menu-subtitle">Pilihan lumpia lezat dengan bahan berkualitas dan harga terjangkau</p>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <div class="menu-icon">🥟</div>
+                    <h3>Lumpia Original</h3>
+                    <p class="menu-description">Perpaduan sempurna rebung segar, ayam berkualitas, telur, dan wortel yang memberikan cita rasa autentik lumpia tradisional</p>
+                    <div class="menu-details">
+                        <div class="ingredients">
+                            <h5>Komposisi:</h5>
+                            <ul>
+                                <li>Rebung segar</li>
+                                <li>Ayam fillet</li>
+                                <li>Telur ayam</li>
+                                <li>Wortel</li>
+                                <li>Bumbu rahasia</li>
+                            </ul>
+                        </div>
+                        <div class="nutrition">
+                            <span class="portion">Porsi: 1 buah</span>
+                            <span class="calories">~150 kalori</span>
+                        </div>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">Mulai Rp 3.000</span>
+                        <div class="menu-actions">
+                            <button class="btn-order" data-menu="Lumpia Original" data-price="3000">
+                                <i class="fas fa-shopping-cart"></i>
+                                Pesan Sekarang
+                            </button>
+                            <button class="btn-info" data-menu="Lumpia Original">
+                                <i class="fas fa-info-circle"></i>
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">⭐</div>
+                    <h3>Lumpia Spesial</h3>
+                    <div class="bestseller-badge">Terlaris</div>
+                    <p class="menu-description">Menu andalan dengan isian rebung pilihan, ayam premium, dan telur segar yang dibalut kulit lumpia renyah</p>
+                    <div class="menu-details">
+                        <div class="ingredients">
+                            <h5>Komposisi:</h5>
+                            <ul>
+                                <li>Rebung premium</li>
+                                <li>Ayam premium</li>
+                                <li>Telur kampung</li>
+                                <li>Bumbu spesial</li>
+                            </ul>
+                        </div>
+                        <div class="nutrition">
+                            <span class="portion">Porsi: 1 buah</span>
+                            <span class="calories">~180 kalori</span>
+                        </div>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">Mulai Rp 4.000</span>
+                        <div class="menu-actions">
+                            <button class="btn-order" data-menu="Lumpia Spesial" data-price="4000">
+                                <i class="fas fa-shopping-cart"></i>
+                                Pesan Sekarang
+                            </button>
+                            <button class="btn-info" data-menu="Lumpia Spesial">
+                                <i class="fas fa-info-circle"></i>
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">🍽️</div>
+                    <h3>Lumpia Medium</h3>
+                    <p class="menu-description">Ukuran sedang yang pas untuk camilan atau makanan ringan dengan cita rasa yang tidak kalah lezat</p>
+                    <div class="menu-details">
+                        <div class="ingredients">
+                            <h5>Komposisi:</h5>
+                            <ul>
+                                <li>Rebung segar</li>
+                                <li>Ayam</li>
+                                <li>Telur</li>
+                                <li>Bumbu pilihan</li>
+                            </ul>
+                        </div>
+                        <div class="nutrition">
+                            <span class="portion">Porsi: 1 buah</span>
+                            <span class="calories">~120 kalori</span>
+                        </div>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">Mulai Rp 3.500</span>
+                        <div class="menu-actions">
+                            <button class="btn-order" data-menu="Lumpia Medium" data-price="3500">
+                                <i class="fas fa-shopping-cart"></i>
+                                Pesan Sekarang
+                            </button>
+                            <button class="btn-info" data-menu="Lumpia Medium">
+                                <i class="fas fa-info-circle"></i>
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-info">
+                <div class="info-card">
+                    <h4>Informasi Pemesanan</h4>
+                    <p><strong>Tombol "Pesan Sekarang":</strong> Langsung menghubungi WhatsApp untuk pemesanan</p>
+                    <p><strong>Tombol "Detail":</strong> Melihat informasi lengkap menu dan cara pembuatan</p>
+                    <p><strong>Minimum Order:</strong> 0 buah untuk delivery</p>
+                    <p><strong>Waktu Pembuatan:</strong> 15-20 menit</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeri" class="gallery-section">
+            <div class="container">
+                <h2>Galeri Produk</h2>
+                <p class="gallery-subtitle">Lihat proses pembuatan dan hasil lumpia kami</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="IMG_6471.jpg" alt="Lumpia segar" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Lumpia Segar</h4>
+                            <p>Lumpia yang baru selesai dibuat</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="lumpia.jpg" alt="Proses pembuatan" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Proses Pembuatan</h4>
+                            <p>Dibuat dengan tangan oleh chef berpengalaman</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="IMG_6462.jpg" alt="Bahan segar" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Bahan Segar</h4>
+                            <p>Rebung dan sayuran segar setiap hari</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="IMG_6475.jpg" alt="Siap disajikan" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Siap Disajikan</h4>
+                            <p>Lumpia hangat siap untuk dinikmati</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item video-item">
+                        <video controls preload="metadata" playsinline muted loop>
+                            <source src="video 1.mov" type="video/quicktime">
+                            <source src="video 1.mov" type="video/mp4">
+                            Maaf, browser Anda tidak mendukung pemutaran video.
+                        </video>
+                        <div class="gallery-overlay video-overlay">
+                            <h4>Lumpia Hangat</h4>
+                            <p>Klik untuk memutar video</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item video-item">
+                        <video controls preload="metadata" playsinline muted loop>
+                            <source src="video 2.mov" type="video/quicktime">
+                            <source src="video 2.mov" type="video/mp4">
+                            Maaf, browser Anda tidak mendukung pemutaran video.
+                        </video>
+                        <div class="gallery-overlay video-overlay">
+                            <h4>Testimoni Pelanggan</h4>
+                            <p>Klik untuk memutar video</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="contact-section">
+            <h2>Hubungi Kami</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telepon</h4>
+                            <p>082175755574</p>
+                            <small>Buka 08:00 - 20:00 WIB</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>082175755574</p>
+                            <small>Chat langsung untuk pemesanan</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Lokasi Cabang 1</h4>
+                            <p>Gerbang perum dreamingland samping Indomart</p>
+                            <small>Kota Surabaya, Jawa Timur</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Lokasi Cabang 2</h4>
+                            <p>Area Car Free Day (CFD) Jl. Darmo Surabaya</p>
+                            <small>Kota Surabaya, Jawa Timur</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Lokasi Cabang 3</h4>
+                            <p>Jln Wringin kurung depan masjid biru</p>
+                            <small>Kota Surabaya, Jawa Timur</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Jam Operasional</h4>
+                            <p>Senin - Minggu</p>
+                            <small>08:00 - 20:00 WIB</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-methods">
+                    <h3>Cara Pemesanan</h3>
+                    <div class="order-options">
+                        <div class="order-option">
+                            <i class="fas fa-phone-alt"></i>
+                            <h4>Telepon Langsung</h4>
+                            <p>Hubungi nomor di atas untuk pemesanan langsung</p>
+                            <a href="tel:082175755574" class="btn-contact">Telepon Sekarang</a>
+                        </div>
+                        <div class="order-option">
+                            <i class="fab fa-whatsapp"></i>
+                            <h4>WhatsApp</h4>
+                            <p>Chat melalui WhatsApp untuk pemesanan yang lebih mudah</p>
+                            <a href="https://wa.me/62082175755574?text=Halo,%20saya%20ingin%20memesan%20lumpia" class="btn-contact whatsapp" target="_blank">Chat WhatsApp</a>
+                        </div>
+                        <div class="order-option">
+                            <i class="fas fa-store"></i>
+                            <h4>Datang Langsung Cabang 1</h4>
+                            <p>Kunjungi outlet cabang 1 untuk menikmati lumpia segar</p>
+                            <button class="btn-contact" onclick="showMap('cabang1')">Lihat Lokasi Cabang 1</button>
+                        </div>
+                        <div class="order-option">
+                            <i class="fas fa-store"></i>
+                            <h4>Datang Langsung Cabang 2</h4>
+                            <p>Kunjungi outlet cabang 2 untuk menikmati lumpia segar</p>
+                            <button class="btn-contact" onclick="showMap('cabang2')">Lihat Lokasi Cabang 2</button>
+                        </div>
+                        <div class="order-option">
+                            <i class="fas fa-store"></i>
+                            <h4>Datang Langsung Cabang 3</h4>
+                            <p>Kunjungi outlet cabang 3 untuk menikmati lumpia segar</p>
+                            <button class="btn-contact" onclick="showMap('cabang3')">Lihat Lokasi Cabang 3</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Omah Lumpia. Hak Cipta Dilindungi. | Dibuat dengan ❤️ untuk pecinta lumpia</p>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

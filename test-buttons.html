@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Buttons - Omah Lumpia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        .test-section h3 {
+            margin-top: 0;
+            color: #D32F2F;
+        }
+        .btn-test {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #D32F2F;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn-test:hover {
+            background: #B71C1C;
+        }
+        .status {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .success {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+        .error {
+            background: #ffebee;
+            color: #c62828;
+        }
+        .info {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test Semua Tombol - Omah Lumpia</h1>
+        
+        <div class="test-section">
+            <h3>1. Tombol Telepon</h3>
+            <a href="tel:082175755574" class="btn-test">📞 Test Telepon</a>
+            <div class="status info">Klik untuk test panggilan telepon</div>
+        </div>
+
+        <div class="test-section">
+            <h3>2. Tombol WhatsApp</h3>
+            <a href="https://wa.me/62082175755574?text=Halo,%20saya%20ingin%20memesan%20lumpia" class="btn-test" target="_blank">💬 Test WhatsApp</a>
+            <div class="status info">Klik untuk test chat WhatsApp</div>
+        </div>
+
+        <div class="test-section">
+            <h3>3. Tombol Lokasi Cabang</h3>
+            <button class="btn-test" onclick="testShowMap('cabang1')">📍 Test Cabang 1</button>
+            <button class="btn-test" onclick="testShowMap('cabang2')">📍 Test Cabang 2</button>
+            <button class="btn-test" onclick="testShowMap('cabang3')">📍 Test Cabang 3</button>
+            <div id="location-status" class="status info">Klik untuk test modal lokasi</div>
+        </div>
+
+        <div class="test-section">
+            <h3>4. Tombol Pesan Menu</h3>
+            <button class="btn-test" onclick="testOrderButton('Lumpia Medium', '3500')">🛒 Test Pesan Lumpia</button>
+            <div class="status info">Klik untuk test pemesanan via WhatsApp</div>
+        </div>
+
+        <div class="test-section">
+            <h3>5. Console Log</h3>
+            <div class="status info">Buka Developer Tools (F12) untuk melihat log aktivitas tombol</div>
+        </div>
+    </div>
+
+    <script>
+        // Test function for location buttons
+        function testShowMap(cabang) {
+            console.log('Testing showMap function for:', cabang);
+            
+            const locations = {
+                'cabang1': 'Gerbang perum dreamingland samping Indomart, Surabaya',
+                'cabang2': 'Area Car Free Day (CFD) Jl. Darmo Surabaya',
+                'cabang3': 'Jln Wringin kurung depan masjid biru, Surabaya'
+            };
+            
+            const location = locations[cabang];
+            const statusDiv = document.getElementById('location-status');
+            
+            if (location) {
+                statusDiv.innerHTML = `✅ Test berhasil! Lokasi: ${location}`;
+                statusDiv.className = 'status success';
+                
+                // Simulate opening Google Maps
+                const mapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(location)}`;
+                console.log('Would open:', mapsUrl);
+                
+                // Ask user if they want to actually open the map
+                if (confirm(`Buka Google Maps untuk ${cabang}?\n${location}`)) {
+                    window.open(mapsUrl, '_blank');
+                }
+            } else {
+                statusDiv.innerHTML = `❌ Test gagal! Cabang tidak ditemukan: ${cabang}`;
+                statusDiv.className = 'status error';
+            }
+        }
+        
+        // Test function for order buttons
+        function testOrderButton(menuName, price) {
+            console.log('Testing order button for:', menuName, 'Price:', price);
+            
+            const message = `Halo, saya ingin memesan ${menuName} (Rp ${price}). Mohon informasi lebih lanjut.`;
+            const whatsappUrl = `https://wa.me/62082175755574?text=${encodeURIComponent(message)}`;
+            
+            console.log('WhatsApp URL:', whatsappUrl);
+            
+            if (confirm(`Test pemesanan ${menuName}?\nHarga: Rp ${price}\n\nKlik OK untuk buka WhatsApp`)) {
+                window.open(whatsappUrl, '_blank');
+            }
+        }
+        
+        // Test all buttons on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🧪 Button Test Page Loaded');
+            console.log('📱 Testing all button functionalities...');
+            
+            // Test phone links
+            const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+            console.log('📞 Phone links found:', phoneLinks.length);
+            
+            // Test WhatsApp links
+            const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+            console.log('💬 WhatsApp links found:', whatsappLinks.length);
+            
+            // Test location buttons
+            const locationButtons = document.querySelectorAll('button[onclick*="testShowMap"]');
+            console.log('📍 Location buttons found:', locationButtons.length);
+            
+            // Test order buttons
+            const orderButtons = document.querySelectorAll('button[onclick*="testOrderButton"]');
+            console.log('🛒 Order buttons found:', orderButtons.length);
+            
+            console.log('✅ All button tests initialized successfully!');
+        });
+        
+        // Add click tracking for all buttons
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('btn-test')) {
+                console.log('🖱️ Button clicked:', e.target.textContent.trim());
+            }
+        });
+    </script>
+</body>
+</html>
